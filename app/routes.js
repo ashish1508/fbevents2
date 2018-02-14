@@ -51,14 +51,7 @@ module.exports = function(app){
         res.redirect('/login');
 
     })
-    /*app.get('/login',function(req,res){
-    	console.log(req.isAuthenticated());
-    	if(req.isAuthenticated())
-    		res.redirect('/home');
-    	else
-    		res.render('login');
-
-    });*/
+    
 
     app.post('/auth/login',passport.authenticate('local-login',{failureRedirect:'/loginfail'}),function (req, res) {
 	  // console.log( 'login : '+ req.session.passport.user);
@@ -79,13 +72,14 @@ module.exports = function(app){
 
   	app.get('/auth/cuser',function(req,res){
         res.json(req.session.passport.user);
+		
     });
     app.get('/login',function(req,res){
-        res.sendFile(path.resolve(__dirname+'/../public/views/login.html'))
+        res.sendFile(path.resolve(__dirname+'/../public/views/login.html'));
     })
     app.get('/logout',function(req,res){
 	req.logout();
-	    res.redirect('/login');
+	    res.sendFile(path.resolve(__dirname+'/../public/views/logout.html'));
     })
     app.get('/home',function(req,res){
 
@@ -130,18 +124,6 @@ module.exports = function(app){
 
 
 
-    app.post('/api/addevent/',function(req,res){
-        console.log(req);
-        //var eventn = req.body.params.name;
-        //var eventp = req.body.params.place;
-        //console.log(eventn);
-        //console.log(eventp);
-        //var newevent = new eventi({name:eventn,place:eventp});
-        /*newevent.save(function(err,data){
-            if(err) throw err;
-            console.log(data);
-        })*/
-    })
     
 
 
