@@ -33,7 +33,7 @@ module.exports = function(app){
     app.use(passport.session());
     var upload = multer({ storage: storage });
 	app.get('/signup',function(req,res){
-		res.sendFile('../public/views/signup');
+		res.sendFile(path.resolve(__dirname+'/../public/views/signup.html'));
     })
 
     app.get('/',function(req,res){
