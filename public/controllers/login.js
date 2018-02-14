@@ -4,7 +4,7 @@ login.controller('logincontrol',['$scope','$http','$window',function($scope,$htt
 	$scope.login = function(){
 		$http.post('/auth/login',$scope.user).then(function(res){
 			console.log(res);
-			$window.location.href = 'http://localhost:3000/home';
+			$window.location.href = 'https://gentle-plains-65118.herokuapp.com/home';
 			
 			
 		},function(err){

@@ -15,7 +15,7 @@ app.use(bodyparser({uploadDir:'/uploads'}));
 app.set('view engine','ejs');
 require('./app/routes')(app); 
 
-app.listen(3000 ,function(){
+app.listen(process.env.PORT||8080 ,function(){
 	console.log("listening");
 })
 exports = module.exports = app; 
