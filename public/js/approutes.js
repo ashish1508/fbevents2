@@ -25,7 +25,7 @@ myapp.config(['$routeProvider','$locationProvider',function($routeProvider,$loca
 	
 	.when('/logout',{
 		templateUrl:'views/logout.html',
-		
+		controller:'logoutcontrol'
 	})
 
 
