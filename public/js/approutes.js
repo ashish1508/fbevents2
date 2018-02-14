@@ -22,6 +22,11 @@ myapp.config(['$routeProvider','$locationProvider',function($routeProvider,$loca
 		templateUrl:'views/invevents.html',
 		controller:'invitecontrol'
 	})
+	
+	.when('/logout',{
+		templateUrl:'views/logout.html',
+		
+	})
 
 
 	.when('/page2',{
