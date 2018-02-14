@@ -88,8 +88,8 @@ module.exports = {
 	signup : function(user,username,password){
 				user.findOne({username:username},function(err,data){
 					if(err) throw err;
-					if(data)
-						res.redirect('/home');
+					
+						
 					var pwddata = sha512(password,genrandomstring())
 					var newuser = new user({username:username,password:pwddata.pwdhash,salt:pwddata.salt});
 					newuser.save(function(err,data){
