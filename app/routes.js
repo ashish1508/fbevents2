@@ -83,7 +83,10 @@ module.exports = function(app){
     app.get('/login',function(req,res){
         res.sendFile(path.resolve(__dirname+'/../public/views/login.html'))
     })
-
+    app.get('/logout',function(req,res){
+	req.logout();
+	    res.redirect('/login');
+    })
     app.get('/home',function(req,res){
 
     	//res.render('home');
