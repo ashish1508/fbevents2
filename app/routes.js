@@ -246,10 +246,9 @@ module.exports = function(app){
     })
 
     app.get('*', function(req, res) {
-            if(req.isAuthenticated())
+            
             res.sendFile(path.resolve(__dirname+'/../public/views/home.html')); // load our public/index.html file
-             else
-            res.redirect('/login');
+           
 
         });
 
