@@ -1,0 +1,24 @@
+<div ng-app='page2'>
+<h3>private event</h3>
+<p>{{message}}</p>
+<h4>add a event</h4>
+<form >
+	 name :<input type="text" ng-model="evnt.name" ></br></br>
+	 place:<input type="text" ng-model="evnt.place" ></br></br>
+	start : date:<input type="date" ng-model="evnt.sdate" > time :<input type="time" ng-model="evnt.stime" ></br></br>
+	end : date:<input type="date" ng-model="evnt.edate" > time:<input type="time" ng-model="evnt.etime" ></br></br>
+	
+    description :<textarea rows="4" columns="50" ng-model="evnt.desc"></textarea></br></br>
+    event photo :<input type="file"  file-model="evnt.file"></br></br>
+	invite : <input type="text" ng-model="invite" > <button  ng-click='inv()'>invite</button><br><br>
+	<ul>
+		<li ng-repeat='x in evnt.invites'>{{x}}</li>
+	</ul>
+
+    submit data :<input type='submit' ng-click="Submit()"><br><br>
+</form>	
+</div>
+			
+		
+
+

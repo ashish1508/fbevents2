@@ -1,0 +1,29 @@
+
+<div ng-app='page1'>
+<h2> Public Event</h2>
+<p>{{message}}</p><br>
+<h3>search for a user</h3>
+<p>{{data}}</p>
+
+<form >
+	username :<input type="text" ng-model="username"></br></br>
+	submit :<input type="submit" name="submit" ng-click="start()">
+
+</form>
+<br><br>	
+<h4>add event</h4>
+
+<form >
+	name :<input type="text" ng-model="evnt.name" ></br></br>
+	place :<input type="text" ng-model="evnt.place" ></br></br>
+    start : date:<input type="date" ng-model="evnt.sdate" > time :<input type="time" ng-model="evnt.stime" ></br></br>
+	end : date:<input type="date" ng-model="evnt.edate" > time:<input type="time" ng-model="evnt.etime" ></br></br>
+	
+    description :<textarea rows="4" columns="50" ng-model="evnt.desc"></textarea></br></br>
+
+
+	image :<input type="file"  file-model="evnt.file"></br></br>
+	submit :<button type='submit' name="submit" ng-click="Submit()" >submit</button>
+
+</form>	
+</div>

@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/views/partial/event.css">
+<div ng-app="invevnt">
+
+<h1> <b>Invited Events</b></h1>
+
+<div class="container">
+		<div class="row">
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+				<ul class="event-list">
+					<li ng-repeat="z in details">
+						
+
+						<time>
+							
+							<div id="1" >14</div>
+							<div id="2" class="month">2</div>
+							<div id="3" class="year">2018</div>
+							<div id="4" class="time">ALL DAY</div>
+						</time>
+						
+						<img  src="/uploads/{{z.imgloc}}" />
+						<div class="info">
+							<h2 class="title">{{z.name}}</h2>
+							<p class="desc">{{z.desc}}</p>
+							<h3 class="desc">{{z.place}}</h3>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+
+
+</div>
