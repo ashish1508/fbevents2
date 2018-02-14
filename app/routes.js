@@ -249,7 +249,7 @@ module.exports = function(app){
             if(req.isAuthenticated())
             res.sendFile(path.resolve(__dirname+'/../public/views/home.html')); // load our public/index.html file
              else
-            res.redirect('/home');
+            res.redirect('/login');
 
         });
 
