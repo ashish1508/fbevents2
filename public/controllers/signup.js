@@ -4,7 +4,7 @@ signup.controller('signupcontrol',['$scope','$http','$window',function($scope,$h
 	
 	$scope.signup = function(){
 		$http.post('/signup',$scope.use);
-		$window.location.href='https://gentle-plains-65118.com/login';
+		$window.location.href='https://gentle-plains-65118.herokuapp.com/login';
 	
 	}
 }])
