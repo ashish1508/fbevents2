@@ -3,7 +3,8 @@ signup.controller('signupcontrol',['$scope','$http','$window',function($scope,$h
 	$scope.use ={};
 	
 	$scope.signup = function(){
-		$http.post('/signup',$scope.use)
+		$http.post('/signup',$scope.use);
+		$window.location.href='https://gentle-plains-65118.com/login';
 	
 	}
 }])
